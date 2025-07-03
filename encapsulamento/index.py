@@ -1,4 +1,4 @@
 class pessoa:
     def __init__(self, nome, idade):
-        self.nome = nome
+        self._nome = nome
         self.__idade = idade
