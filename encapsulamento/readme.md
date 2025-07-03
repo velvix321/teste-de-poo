@@ -1,0 +1,1 @@
+objetivo e usar encapsulamento

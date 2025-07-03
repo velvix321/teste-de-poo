@@ -1,0 +1,1 @@
+o objetivo e usar setter e getter de forma simples e pratica para alterar a  classe pessoa
