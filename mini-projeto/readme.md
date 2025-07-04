@@ -1,0 +1,1 @@
+objetivo e criar um mini projeto de admin e usuario
