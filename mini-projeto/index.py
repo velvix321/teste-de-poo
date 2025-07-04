@@ -4,27 +4,29 @@ class  bancoDeDados():
         self._idade = idade
         self._numero = numero
     
+    def mostra_usuario(self):
+        print(f"{self._nome}, {self._idade}, {self._numero}")
     
 class usuario(bancoDeDados):
     def __init__(self, nome, idade, numero):
         super().__init__(nome, idade, numero)
     
     def mostra_usuario(self):
-        print(f"{self._nome}, {self._idade}, {self._numero}")
+        super().mostra_usuario()
 
 
 class admin(bancoDeDados):
     def __init__(self, nome, idade, numero):
         super().__init__(nome, idade, numero)
     
-    def mostra_tudo(self):
-        print(f"{self._nome}, {self._idade}, {self._numero}")
+    def mostra_usuario(self):
+        super().mostra_usuario()
     
     @property
     def nome(self):
         return self._nome  
     
-    @nome.deletar
+    @nome.deleter
     def nome(self):
         if hasattr(self, "_nome"):
             print("nome deletado")
@@ -37,7 +39,7 @@ class admin(bancoDeDados):
     def idade(self):
         return self._idade
 
-    @idade.deletar
+    @idade.deleter
     def idade(self):
         if hasattr(self, "_idade"):
             print("idade deletada")
@@ -50,7 +52,7 @@ class admin(bancoDeDados):
     def numero(self):
         return self._numero
     
-    @numero.deletar
+    @numero.deleter
     def numero(self):
         if hasattr(self, "_numero"):
             print("numero deletado")
